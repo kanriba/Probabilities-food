@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Array of your 6 Google Drive links
+        const links = [
+            "https://drive.google.com/file/d/1vS7czlcstjw1dkj28Gp_x7i7n-c1yyBf/view?usp=drive_link",
+            "https://drive.google.com/file/d/170kzBqsn8Aj6Japf4bCKBEtWwyVz0hjk/view?usp=drive_link",
+            "https://drive.google.com/file/d/13RNn5DJh9tM_RB0J8MLLKubGWCYDtvH9/view?usp=drive_link",
+            "https://drive.google.com/file/d/1r0_xjfoqpWRmQcsPEZCjYXwosY2LwbAN/view?usp=drive_link",
+            "https://drive.google.com/file/d/11vs4_KADMyei6IfTWzXFbRhbaX5RRAJX/view?usp=drive_link",
+            "https://drive.google.com/file/d/1NhyPm8TLB3TbawJTjsontihiN-HPvCrC/view?usp=drive_link"
+        ];
+
+        // Pick a completely random index between 0 and 5
+        const randomIndex = Math.floor(Math.random() * links.length);
+        
+        // Grab the lucky link
+        const targetLink = links[randomIndex];
+
+        // Instantly send the user to that link
+        window.location.href = targetLink;
+    </script>
+    <style>
+        /* Simple fallback styling in case it takes a second to load */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .loader {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <h2>Opening your link...</h2>
+        <p>If you are not redirected automatically, please wait a moment.</p>
+    </div>
+</body>
+</html>
